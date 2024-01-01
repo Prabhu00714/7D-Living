@@ -20,8 +20,8 @@ const MainComponent = () => {
 
   return (
     <div>
-      <RightDrawer open={open} handleDrawerClose={handleDrawerClose} drawerWidth={drawerWidth} />
-        <HeaderComponent open={open} handleDrawerOpen={handleDrawerOpen} />
+      {/* <RightDrawer open={open} handleDrawerClose={handleDrawerClose} drawerWidth={drawerWidth} /> */}
+        {/* <HeaderComponent open={open} handleDrawerOpen={handleDrawerOpen} /> */}
         <BodyComponent />
         <FooterComponent />
     </div>

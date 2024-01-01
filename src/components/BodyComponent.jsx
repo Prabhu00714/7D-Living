@@ -28,7 +28,7 @@ const BodyComponent = () => {
       <img
         src={image}
         alt="logo"
-        style={{ width: '100%', height: 'auto', marginTop: '55px' }}
+        style={{ width: '100%', height: 'auto' }}
       />
     </div>
   );

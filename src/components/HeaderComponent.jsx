@@ -19,9 +19,11 @@ function HideOnScroll(props) {
     target: window ? window() : undefined,
   });
 
+  const fontSize = trigger ? '28px' : '38px';
+
   return (
     <Slide appear={false} direction="down" in={!trigger}>
-      {children}
+      {React.cloneElement(children, { fontSize })}
     </Slide>
   );
 }
@@ -36,7 +38,7 @@ const HeaderComponent = ({ props, open, handleDrawerOpen }) => {
     <>
       <CssBaseline />
       <HideOnScroll {...props}>
-        <AppBar style={{ height: '125px', backgroundColor: '#fff', position: 'fixed' }}>
+        <AppBar style={{ height: '120px', backgroundColor: '#fff', position: 'fixed' }}>
           <Toolbar sx={{ position: 'fixed'}}>
             <Grid container spacing={2} alignItems="center">
               <Grid item>
@@ -52,6 +54,9 @@ const HeaderComponent = ({ props, open, handleDrawerOpen }) => {
                     color: '#000',
                     fontSize: '38px',
                     fontFamily: 'Playfair Display',
+                    '@media (max-width: 600px)': {
+                      fontSize: '24px',
+                    },
                   }}
                   component="div"
                 >
@@ -59,7 +64,7 @@ const HeaderComponent = ({ props, open, handleDrawerOpen }) => {
                 </Typography>
               </Grid>
 
-              <Grid item >
+              {/* <Grid item >
                 <IconButton
                   aria-label="open drawer"
                   edge="end"
@@ -68,23 +73,35 @@ const HeaderComponent = ({ props, open, handleDrawerOpen }) => {
                 >
                   <MenuIcon style={{ color: '#000', marginLeft:'220px' }}  />
                 </IconButton>
-              </Grid>
-              
-              {/* Bottom Section: Accordions */}
-              <Grid container spacing={3} xs={12} sx={{ marginTop: '-20px' }}>
-                <Grid item sx={{  whiteSpace: 'nowrap' }}>
-                    <AccordionMenu title="Personalized Diet Chart" />
+              </Grid>      */}
+
+              {/* <Grid
+                container
+                spacing={2}
+                direction="row"
+                justifyContent="space-evenly"
+                alignItems="flex-start"
+                sx={{
+                  '@media (max-width: 600px)': {
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                  },
+                }}
+              >
+                <Grid item sx={{ flexBasis: 'auto' }}>
+                  <AccordionMenu title="Personalized Diet Chart" /> 
                 </Grid>
-                <Grid item sx={{  whiteSpace: 'nowrap' }}>
-                    <AccordionMenu title="Comprehensive Health Analysis" />
+                <Grid item sx={{ flexBasis: 'auto' }}>
+                  <AccordionMenu title="Comprehensive Health Analysis" />
                 </Grid>
-                <Grid item sx={{whiteSpace: 'nowrap' }}>
-                    <AccordionMenu title="Customized Performance Report" />
+                <Grid item sx={{ flexBasis: 'auto' }}>
+                  <AccordionMenu title="Customized Performance Report" />
                 </Grid>
-                <Grid item sx={{  whiteSpace: 'nowrap' }}>
-                    <AccordionMenu title="Expert Ayurvedic Doctor" />
+                <Grid item sx={{ flexBasis: 'auto' }}>
+                  <AccordionMenu title="Expert Ayurvedic Doctor" />
                 </Grid>
-                </Grid>
+              </Grid> */}
+
             </Grid>
           </Toolbar>
         </AppBar>
