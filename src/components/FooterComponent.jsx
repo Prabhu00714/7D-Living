@@ -13,8 +13,8 @@ const FooterComponent = () => {
 
   return (
     <footer className="footer-container">
-      <SocialIcon icon={InstagramIcon} link={instaID} />
       <SocialIcon icon={WhatsAppIcon} link={phoneNumber} isTel />
+      <SocialIcon icon={InstagramIcon} link={instaID} />
       <SocialIcon icon={EmailIcon} link={mailID} isMailto />
       {/* <div className="copyright-text">
         <Typography variant="body2">
