@@ -1,4 +1,3 @@
-// FooterComponent.js
 import React from 'react';
 import InstagramIcon from '../assets/Instagram.png';
 import WhatsAppIcon from '../assets/WhatsApp.png';

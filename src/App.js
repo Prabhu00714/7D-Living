@@ -1,7 +1,7 @@
 import React from 'react';
 import BackgroundImage from './assets/BackgroundImagePC.png';
 import FooterComponent from './components/FooterComponent';
-import './App.css'; // Import your CSS file
+import './App.css';
 
 function App() {
   return (
