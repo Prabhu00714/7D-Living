@@ -1,18 +1,15 @@
 import React from 'react';
-import image from './assets/BackgroundImage.png';
+import BackgroundImage from './assets/BackgroundImagePC.png';
 import FooterComponent from './components/FooterComponent';
+import './App.css'; // Import your CSS file
 
-const App = () => {
+function App() {
   return (
-    <div>
-       <img
-        src={image}
-        alt="logo"
-        style={{ width: '100%', height: 'auto',marginTop:'-1px' }}
-      />
+    <div className="app-container">
+      <img className="background-image" src={BackgroundImage} alt="Background"/>
       <FooterComponent />
     </div>
   );
-};
+}
 
 export default App;
