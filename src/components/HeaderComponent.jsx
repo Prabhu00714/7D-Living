@@ -9,9 +9,9 @@ import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Slide from '@mui/material/Slide';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import Logo from '../assets/Logo.png'; // Replace with the actual path to your logo
+import Logo from '../assets/Logo.png';
 import Grid from '@mui/material/Grid';
-import AccordionMenu from './AccordionMenu'; // Import the AccordionMenu component
+import AccordionMenu from './AccordionMenu';
 
 function HideOnScroll(props) {
   const { children, window } = props;

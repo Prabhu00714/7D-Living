@@ -11,7 +11,7 @@ const DrawerHeader = ({ handleDrawerClose }) => (
   </Box>
 );
 
-const PersistentDrawerRight = ({ open, handleDrawerClose, drawerWidth }) => {
+const RightDrawer = ({ open, handleDrawerClose, drawerWidth }) => {
   return (
     <Box sx={{ display: 'flex' }}>
       <Drawer
@@ -41,4 +41,4 @@ const PersistentDrawerRight = ({ open, handleDrawerClose, drawerWidth }) => {
   );
 };
 
-export default PersistentDrawerRight;
+export default RightDrawer;

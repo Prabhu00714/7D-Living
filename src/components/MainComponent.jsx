@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Container } from '@mui/material';
 import HeaderComponent from './HeaderComponent';
-import PersistentDrawerRight from './PersistentDrawerRight';
+import RightDrawer from './RightDrawer';
 import BodyComponent from './BodyComponent';
 import FooterComponent from './FooterComponent';
 
@@ -20,7 +20,7 @@ const MainComponent = () => {
 
   return (
     <div>
-      <PersistentDrawerRight open={open} handleDrawerClose={handleDrawerClose} drawerWidth={drawerWidth} />
+      <RightDrawer open={open} handleDrawerClose={handleDrawerClose} drawerWidth={drawerWidth} />
         <HeaderComponent open={open} handleDrawerOpen={handleDrawerOpen} />
         <BodyComponent />
         <FooterComponent />
